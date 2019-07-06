@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">If & For structural directives</h5>
+      <p>Structural detectives have * at the begining eg: *ngIf, *ngFor</p>
+      <a (click)="onlyOdd = !onlyOdd" class="btn btn-primary" href="#" role="button"> Tougle Odd Even</a>
+
+      <div *ngIf="onlyOdd">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let odd of allOdd"> {{odd}} </li>
+        </ul>
+      </div>
+
+      <div *ngIf="!onlyOdd">
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let even of allEven"> {{even}} </li>
+        </ul>
+      </div>
+    </div>
+  </div>

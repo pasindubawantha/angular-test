@@ -1,0 +1,11 @@
+<button (click)="onCreateServer()" class="btn btn-primary" [disabled]="!btnDisabled"> Add server </button>
+<p [ngStyle]="{color: getColor()}"
+    [ngClass]="{sccclass: serverCreated}">
+  {{creationStatus}}
+</p>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<label for="">{{serverName}}</label>
+<p *ngIf="serverCreated; else noServer">Server created</p>
+<ng-template #noServer>
+  <p>No server created</p>
+</ng-template>
